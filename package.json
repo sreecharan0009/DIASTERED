@@ -1,5 +1,6 @@
 {
   "name": "disastered-india",
+  "homepage": "https://sreecharan0009.gitgub.io/DIASTERED/",
   "version": "0.1.0",
   "private": true,
   "rocketCritical": {
@@ -19,11 +20,6 @@
       "autoprefixer",
       "postcss"
     ],
-    "scripts": [
-      "start",
-      "build",
-      "serve"
-    ],
     "warning": "🚨 CRITICAL: DO NOT REMOVE OR MODIFY ABOVE DEPENDENCIES - Required for app functionality"
   },
   "dependencies": {
@@ -41,6 +37,7 @@
     "date-fns": "^4.1.0",
     "dotenv": "^16.0.1",
     "framer-motion": "^10.16.4",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.484.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -57,26 +54,12 @@
   },
   "scripts": {
     "start": "vite",
+  "scripts": {
+    "start": "vite",
     "build": "vite build --sourcemap",
-    "serve": "vite preview"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "serve": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
